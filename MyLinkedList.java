@@ -1,4 +1,3 @@
-import java.io.Console;
 
 public class MyLinkedList {
 
@@ -79,7 +78,18 @@ public class MyLinkedList {
         tail.setNext(null);
         count--;
         return tail;
-        
     }
+    public void removeAfter(Node current){
+        if(current == null){
+             return null;
+        }
+        Node temp = current.next;
+        if(temp == null){
+            return null;
+        }else{
+            current.next = temp.next;
+        }
+        count--;
+    } 
 }
 
